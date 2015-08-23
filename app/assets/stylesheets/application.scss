@@ -1,0 +1,7 @@
+@import "materialize/components/color";
+$primary-color: color("blue", "lighten-2") !default;
+@import "materialize";
+
+.group {
+	margin-bottom: .5em;
+}
