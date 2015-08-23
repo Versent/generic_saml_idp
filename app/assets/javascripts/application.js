@@ -11,9 +11,4 @@
 // about supported directives.
 //
 // = require jquery
-// = require materialize-sprockets
 // = require_tree .
-
-$(document).ready(function () {
-  $('.button-collapse').sideNav()
-})

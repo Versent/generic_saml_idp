@@ -1,41 +1,27 @@
-<div class="row">
-
-  <div class="col s12">
-
-    <div class="row">
-      <div class="col s12 center">
-        <h2>Log in</h2>
+<section class="flex flex-center">
+  <div class="flex-none sm-col-5 mx-auto py2">
+    <h1 class="mt0">Login</h1>
+    <div class="border border-silver rounded p2">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), :class => 'clearfix') do |f| %>
+      <div class="sm-col-12">
+      <%= f.label :email, :class => 'hide' %>
+      <%= f.email_field :email, autofocus: true, :class => 'block col-12 field not-rounded y-group-item' , :placeholder => 'Email'%>
+      <%= f.label :password, :class => 'hide' %>
+      <%= f.password_field :password, autocomplete: "off", :class => 'block col-12 field not-rounded y-group-item', :placeholder => 'Password'%>
       </div>
-    </div>
-    <div class="row">
-      <div class="col s12 center">
-        <div class="z-depth-3 col s6 offset-s3" style="padding: 1.5rem 2rem 1.5rem;">
-          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-            <div class="group input-field col s12">
-              <%= f.label :email %><br />
-              <%= f.email_field :email, autofocus: true, :class => 'validate' %>
-            </div>
 
-            <div class="group input-field col s12">
-              <%= f.label :password %><br />
-              <%= f.password_field :password, autocomplete: "off"%>
-            </div>
-
-            <div class="group col s12">
-              <% if devise_mapping.rememberable? -%>
-                <%= f.check_box :remember_me %>
-                <%= f.label :remember_me %>
-              <% end -%>
-            </div>
-
-            <div class="group col s12">
-              <%= f.button "Log in", :class => 'btn waves-effect waves-light' %>
-              <%= link_to "Sign up", new_registration_path(resource_name), :class => 'btn waves-effect waves-light'%><br />
-            </div>
-          <% end %>
-        </div>
+      <div class="py1">
+      <% if devise_mapping.rememberable? -%>
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      <% end -%>
       </div>
+
+      <div class="py1">
+        <%= f.button "Log in", :class => 'button block full-width button-big bg-gray'%>
+      </div>
+
+    <% end %>
     </div>
   </div>
-
-</div>
+</section>

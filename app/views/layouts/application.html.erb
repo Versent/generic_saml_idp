@@ -7,39 +7,41 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div>
 
-<nav class="navbar-fixed">
-  <div class="nav-wrapper container">
-    <a href="#!" class="brand-logo">Logo</a>
-    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    <ul class="right hide-on-med-and-down">
-      <% if user_signed_in? %>
-        <li>
-        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-        </li>
-      <% else %>
-        <li>
-        <%= link_to('Login', new_user_session_path)  %>
-        </li>
-      <% end %>
-    </ul>
-    <ul class="side-nav" id="mobile-demo">
-      <% if user_signed_in? %>
-        <li>
-        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-        </li>
-      <% else %>
-        <li>
-        <%= link_to('Login', new_user_session_path)  %>
-        </li>
-      <% end %>
-    </ul>
+  <div style="min-height:800px;">
+
+    <div class="navbar flex flex-column full-width relative z1 bg-undefined" style="background-size:cover;background-position:center;min-height:4rem;">
+      <div>
+        <div class="flex flex-center full-width" style="height:4rem;">
+          <div>
+            <div class="flex flex-center px2"><%= link_to('Home', root_path) %></div>
+          </div>
+          <div class="flex-grow center bold">IdP</div>
+          <div class="flex flex-center px1">
+            <% if user_signed_in? %>
+            <div>
+              <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => 'button bg-gray')%>
+            </div>
+            <% else %>
+            <div class="mr1">
+              <%= link_to('Sign up', new_user_registration_path, :class => 'button bg-twitter-blue' ) %>
+            </div>
+            <div>
+              <%= link_to('Login', new_user_session_path, :class => 'button bg-gray') %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <%= yield %>
+
+    </div>
   </div>
-</nav>
-
-<div class="container">
-<%= yield %>
-</div>
-
+<div>
 </body>
 </html>
