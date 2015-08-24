@@ -4,7 +4,7 @@
     <div class="border border-silver rounded p2">
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= devise_error_messages! %><% # TODO Replace these messages with inline errors %>
+        <%= devise_error_messages! %>
 
         <div class="py1">
           <%= f.label :email, :class => 'hide' %>

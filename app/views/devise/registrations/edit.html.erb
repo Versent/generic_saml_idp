@@ -14,8 +14,8 @@
     <%= f.label :name, :class => 'hide' %>
     <%= f.text_field :name , :class => 'block col-12 field not-rounded y-group-item', :placeholder => 'Name'%>
 
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
-    <%= f.password_field :password, autocomplete: "off", :class => 'block col-12 field not-rounded y-group-item', :placeholder => 'Password'%>
+    <%= f.label :password, :class => 'hide' %>
+    <%= f.password_field :password, autocomplete: "off", :class => 'block col-12 field not-rounded y-group-item', :placeholder => 'Password (leave blank if you don\'t want to change it)'%>
 
     <%= f.label :password_confirmation, :class => 'hide' %>
     <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'block col-12 field not-rounded y-group-item', :placeholder => 'Confirm Password'%>
