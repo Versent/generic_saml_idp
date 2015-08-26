@@ -50,4 +50,8 @@ group :development, :test do
   gem 'spring'
 
   gem "better_errors"
+
+  gem 'factory_girl_rails'
+  gem 'forgery'
+  gem 'rspec-rails'
 end
