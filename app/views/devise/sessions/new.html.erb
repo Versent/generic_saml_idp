@@ -4,6 +4,9 @@
     <div class="border border-silver rounded p2">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), :class => 'clearfix') do |f| %>
       <div class="sm-col-12">
+      <%= hidden_field_tag 'SAMLRequest', params[:SAMLRequest] %>
+      <%= hidden_field_tag 'RelayState', params[:RelayState] %>
+
       <%= f.label :email, :class => 'hide' %>
       <%= f.email_field :email, autofocus: true, :class => 'block col-12 field not-rounded y-group-item' , :placeholder => 'Email'%>
       <%= f.label :password, :class => 'hide' %>
