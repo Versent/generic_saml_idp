@@ -63,8 +63,15 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.6.0)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
+    forgery (0.6.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     httparty (0.13.5)
@@ -131,6 +138,26 @@ GEM
       json (~> 1.4)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
+    rspec-core (3.2.3)
+      rspec-support (~> 3.2.0)
+    rspec-expectations (3.2.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.2.0)
+    rspec-mocks (3.2.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.2.0)
+    rspec-rails (3.2.1)
+      actionpack (>= 3.0, < 4.3)
+      activesupport (>= 3.0, < 4.3)
+      railties (>= 3.0, < 4.3)
+      rspec-core (~> 3.2.0)
+      rspec-expectations (~> 3.2.0)
+      rspec-mocks (~> 3.2.0)
+      rspec-support (~> 3.2.0)
+    rspec-support (3.2.2)
+    ruby-saml (1.0.0)
+      nokogiri (>= 1.5.10)
+      uuid (~> 2.3)
     saml_idp (0.2.0)
       activesupport
       builder
@@ -183,12 +210,16 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise
+  factory_girl_rails
+  forgery
   jbuilder (~> 2.0)
   jquery-rails
   lograge
   logstash-event
   pg
   rails (= 4.2.3)
+  rspec-rails
+  ruby-saml
   saml_idp
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
@@ -196,6 +227,3 @@ DEPENDENCIES
   sqlite3
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
-
-BUNDLED WITH
-   1.10.6

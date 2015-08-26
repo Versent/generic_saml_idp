@@ -27,6 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise'
+gem 'ruby-saml'
 gem 'saml_idp'
 gem 'lograge'
 gem 'logstash-event'
@@ -50,4 +51,8 @@ group :development, :test do
   gem 'spring'
 
   gem "better_errors"
+
+  gem 'factory_girl_rails'
+  gem 'forgery'
+  gem 'rspec-rails'
 end
