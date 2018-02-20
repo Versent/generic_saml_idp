@@ -1,5 +1,7 @@
 # generic_saml_idp
 
+**NOTE:** This project is archived and will not be updated.
+
 This is a rails project which uses devise and saml_idp to build a Security Assertion Markup Language (SAML) Identity provider (IdP). The initial aim is to use this service to authenticate, and provide authorisation information to the Amazon Webservices Console. 
 
 * Deployment instructions
